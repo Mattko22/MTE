@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/bckps.png</file>
+        <file>img/calcu.png</file>
+        <file>img/change.png</file>
+    </qresource>
+</RCC>
