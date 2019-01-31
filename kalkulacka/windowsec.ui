@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>274</width>
-    <height>541</height>
+    <width>276</width>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,6 +34,12 @@
         </property>
         <item>
          <widget class="QPushButton" name="pushButton_Dec">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>60</width>
@@ -65,12 +71,12 @@ background-color: #e0e0d1;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>30</height>
+            <height>80</height>
            </size>
           </property>
           <property name="font">
            <font>
-            <pointsize>11</pointsize>
+            <pointsize>18</pointsize>
            </font>
           </property>
           <property name="layoutDirection">
@@ -96,6 +102,12 @@ background-color: #e0e0d1;
         </property>
         <item>
          <widget class="QPushButton" name="pushButton_hex">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>60</width>
@@ -127,12 +139,12 @@ background-color: #e0e0d1;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>30</height>
+            <height>80</height>
            </size>
           </property>
           <property name="font">
            <font>
-            <pointsize>11</pointsize>
+            <pointsize>18</pointsize>
            </font>
           </property>
           <property name="layoutDirection">
@@ -195,12 +207,12 @@ background-color: #e0e0d1;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>30</height>
+            <height>80</height>
            </size>
           </property>
           <property name="font">
            <font>
-            <pointsize>11</pointsize>
+            <pointsize>18</pointsize>
            </font>
           </property>
           <property name="layoutDirection">
@@ -764,7 +776,7 @@ background-color:#A0A0A0;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>274</width>
+     <width>276</width>
      <height>21</height>
     </rect>
    </property>
