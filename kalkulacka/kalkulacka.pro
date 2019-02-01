@@ -41,7 +41,8 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     windowsec.ui \
-    dialog.ui
+    dialog.ui \
+    ../../../../../proggram/manager/window.ui
 
 RESOURCES += \
     img.qrc

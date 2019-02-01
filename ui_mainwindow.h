@@ -98,6 +98,7 @@ public:
         sizePolicy.setHeightForWidth(Displej->sizePolicy().hasHeightForWidth());
         Displej->setSizePolicy(sizePolicy);
         Displej->setMinimumSize(QSize(0, 80));
+        Displej->setMaximumSize(QSize(16777215, 16777215));
         QFont font;
         font.setPointSize(18);
         Displej->setFont(font);
