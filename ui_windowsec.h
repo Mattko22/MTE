@@ -29,6 +29,7 @@ class Ui_Windowsec
 public:
     QAction *action_tandart;
     QAction *actionPrevod_Dec_Bin_Hex;
+    QAction *actionKurz_listok;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_2;
@@ -82,6 +83,8 @@ public:
         actionPrevod_Dec_Bin_Hex = new QAction(Windowsec);
         actionPrevod_Dec_Bin_Hex->setObjectName(QString::fromUtf8("actionPrevod_Dec_Bin_Hex"));
         actionPrevod_Dec_Bin_Hex->setEnabled(false);
+        actionKurz_listok = new QAction(Windowsec);
+        actionKurz_listok->setObjectName(QString::fromUtf8("actionKurz_listok"));
         centralwidget = new QWidget(Windowsec);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout_4 = new QVBoxLayout(centralwidget);
@@ -558,8 +561,8 @@ public:
         menubar->addAction(menuMoznosti->menuAction());
         menuMoznosti->addAction(action_tandart);
         menuMoznosti->addSeparator();
-        menuMoznosti->addSeparator();
         menuMoznosti->addAction(actionPrevod_Dec_Bin_Hex);
+        menuMoznosti->addAction(actionKurz_listok);
 
         retranslateUi(Windowsec);
 
@@ -571,6 +574,7 @@ public:
         Windowsec->setWindowTitle(QApplication::translate("Windowsec", "Prevod Dec-Bin-Hex ", nullptr));
         action_tandart->setText(QApplication::translate("Windowsec", "Standardna kalkulacka", nullptr));
         actionPrevod_Dec_Bin_Hex->setText(QApplication::translate("Windowsec", "Prevod Dec-Bin-Hex", nullptr));
+        actionKurz_listok->setText(QApplication::translate("Windowsec", "Kurz. listok", nullptr));
         pushButton_Dec->setText(QApplication::translate("Windowsec", "Dec", nullptr));
         lineEdit_dec->setText(QApplication::translate("Windowsec", "0", nullptr));
         pushButton_hex->setText(QApplication::translate("Windowsec", "Hex", nullptr));

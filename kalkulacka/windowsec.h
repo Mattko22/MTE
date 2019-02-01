@@ -49,6 +49,8 @@ private slots:
 
     void on_lineEdit_bin_textChanged(const QString &arg1);
 
+    void on_actionKurz_listok_triggered();
+
 private:
     Ui::Windowsec *ui;
     QString inputD;

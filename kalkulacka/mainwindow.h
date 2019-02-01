@@ -42,6 +42,10 @@ private slots:
 
     void on_actionPrevod_Dec_Bin_Hex_triggered();
 
+
+
+    void on_actionKurz_listok_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString input;

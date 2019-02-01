@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>261</width>
-    <height>487</height>
+    <height>495</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -758,6 +758,7 @@ QPushButton:pressed {
     <addaction name="actionStandart"/>
     <addaction name="separator"/>
     <addaction name="actionPrevod_Dec_Bin_Hex"/>
+    <addaction name="actionKurz_listok"/>
    </widget>
    <addaction name="menuMo_nosti"/>
   </widget>
@@ -772,6 +773,11 @@ QPushButton:pressed {
   <action name="actionPrevod_Dec_Bin_Hex">
    <property name="text">
     <string>Prevod Dec-Bin-Hex</string>
+   </property>
+  </action>
+  <action name="actionKurz_listok">
+   <property name="text">
+    <string>Kurz. listok</string>
    </property>
   </action>
  </widget>

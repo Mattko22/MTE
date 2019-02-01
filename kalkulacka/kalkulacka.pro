@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,20 +29,24 @@ SOURCES += \
     controller.cpp \
     lexicalanalyzer.cpp \
     postfixnotation.cpp \
-    windowsec.cpp
+    windowsec.cpp \
+    window.cpp \
+    mynetworkclass.cpp
 
 HEADERS += \
         mainwindow.h \
     controller.h \
     postfixnotation.h \
     lexicalanalyzer.h \
-    windowsec.h
+    windowsec.h \
+    window.h \
+    mynetworkclass.h
 
 FORMS += \
         mainwindow.ui \
     windowsec.ui \
     dialog.ui \
-    ../../../../../proggram/manager/window.ui
+    window.ui
 
 RESOURCES += \
     img.qrc

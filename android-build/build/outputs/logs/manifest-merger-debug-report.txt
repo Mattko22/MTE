@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-82:12
-INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-82:12
-INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-82:12
-INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-82:12
-INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-82:12
+ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-83:12
+INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-83:12
+INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-83:12
+INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-83:12
+INJECTED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:1-83:12
 	package
 		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:2:11-42
 	android:versionName
@@ -112,15 +112,15 @@ ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\Andr
 	android:name
 		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:25:24-62
 meta-data#android.app.load_local_libs
-ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:26:13-129
+ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:26:13-165
 	android:value
-		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:26:67-127
+		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:26:67-163
 	android:name
 		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:26:24-66
 meta-data#android.app.load_local_jars
-ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:27:13-102
+ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:27:13-126
 	android:value
-		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:27:67-100
+		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:27:67-124
 	android:name
 		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:27:24-66
 meta-data#android.app.static_init_classes
@@ -189,3 +189,7 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:75:5-81
 	android:name
 		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:75:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:76:5-79
+	android:name
+		ADDED from C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\android-build\AndroidManifest.xml:76:22-76

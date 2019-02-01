@@ -786,8 +786,8 @@ background-color:#A0A0A0;
     </property>
     <addaction name="action_tandart"/>
     <addaction name="separator"/>
-    <addaction name="separator"/>
     <addaction name="actionPrevod_Dec_Bin_Hex"/>
+    <addaction name="actionKurz_listok"/>
    </widget>
    <addaction name="menuMoznosti"/>
   </widget>
@@ -802,6 +802,11 @@ background-color:#A0A0A0;
    </property>
    <property name="text">
     <string>Prevod Dec-Bin-Hex</string>
+   </property>
+  </action>
+  <action name="actionKurz_listok">
+   <property name="text">
+    <string>Kurz. listok</string>
    </property>
   </action>
  </widget>

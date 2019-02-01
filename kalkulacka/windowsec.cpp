@@ -1,6 +1,7 @@
 #include "windowsec.h"
 #include "ui_windowsec.h"
 #include "mainwindow.h"
+#include "window.h"
 #include <iostream>
 #include "math.h"
 #include <QDebug>
@@ -401,4 +402,11 @@ void Windowsec::on_lineEdit_bin_textChanged(const QString &arg1)
     ui->lineEdit_dec->setText(dec);
     ui->lineEdit_hex->setText(hex);
     }
+}
+
+void Windowsec::on_actionKurz_listok_triggered()
+{
+    Window *CWindow = new Window;
+    CWindow->show();
+    setVisible(false);
 }

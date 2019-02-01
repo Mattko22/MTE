@@ -29,6 +29,7 @@ class Ui_MainWindow
 public:
     QAction *actionStandart;
     QAction *actionPrevod_Dec_Bin_Hex;
+    QAction *actionKurz_listok;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout_7;
     QVBoxLayout *verticalLayout_2;
@@ -67,7 +68,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(261, 487);
+        MainWindow->resize(261, 495);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/img/calcu.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -76,6 +77,8 @@ public:
         actionStandart->setEnabled(false);
         actionPrevod_Dec_Bin_Hex = new QAction(MainWindow);
         actionPrevod_Dec_Bin_Hex->setObjectName(QString::fromUtf8("actionPrevod_Dec_Bin_Hex"));
+        actionKurz_listok = new QAction(MainWindow);
+        actionKurz_listok->setObjectName(QString::fromUtf8("actionKurz_listok"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         horizontalLayout_7 = new QHBoxLayout(centralWidget);
@@ -497,6 +500,7 @@ public:
         menuMo_nosti->addAction(actionStandart);
         menuMo_nosti->addSeparator();
         menuMo_nosti->addAction(actionPrevod_Dec_Bin_Hex);
+        menuMo_nosti->addAction(actionKurz_listok);
 
         retranslateUi(MainWindow);
 
@@ -508,6 +512,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Kalkula\304\215ka", nullptr));
         actionStandart->setText(QApplication::translate("MainWindow", "Standardna kalkulacka", nullptr));
         actionPrevod_Dec_Bin_Hex->setText(QApplication::translate("MainWindow", "Prevod Dec-Bin-Hex", nullptr));
+        actionKurz_listok->setText(QApplication::translate("MainWindow", "Kurz. listok", nullptr));
         Displej->setText(QApplication::translate("MainWindow", "0", nullptr));
         pushButton_vymaz->setText(QApplication::translate("MainWindow", "C", nullptr));
         pushButton_backspace->setText(QString());

@@ -72,37 +72,35 @@
                 {
                     "source": "C:\\Users\\Dominika\\Desktop\\skola\\MTE\\kalkulacka\\MTE\\android-build\\res\\values\\libs.xml",
                     "from": {
-                        "startLines": "34,21,9,13,2",
-                        "startColumns": "4,4,4,5,4",
-                        "startOffsets": "1406,505,300,360,57",
-                        "endLines": "36,33,11,19,4",
-                        "endColumns": "12,12,12,13,12",
-                        "endOffsets": "1462,1400,351,497,169"
+                        "startLines": "-1,22,-1,13,-1",
+                        "startColumns": "-1,4,-1,5,-1",
+                        "startOffsets": "-1,529,-1,360,-1",
+                        "endLines": "-1,35,-1,20,-1",
+                        "endColumns": "-1,12,-1,13,-1",
+                        "endOffsets": "-1,1512,-1,521,-1"
                     },
                     "to": {
-                        "startLines": "2,5,18,21,28",
+                        "startLines": "2,5,19,22,30",
                         "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,114,1012,1066,1206",
-                        "endLines": "4,17,20,27,30",
+                        "startOffsets": "55,114,1100,1154,1318",
+                        "endLines": "4,18,21,29,32",
                         "endColumns": "12,12,12,13,12",
-                        "endOffsets": "109,1007,1061,1201,1316"
+                        "endOffsets": "109,1095,1149,1313,1428"
                     }
                 },
                 {
                     "source": "C:\\qtcrator\\5.12.0\\android_armv7\\src\\android\\java\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "5,4,3,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "324,201,88,433",
-                        "endColumns": "107,121,111,84",
-                        "endOffsets": "427,318,195,513"
+                        "startLines": "-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "31,32,33,34",
+                        "startLines": "33,34,35,36",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "1321,1429,1551,1663",
+                        "startOffsets": "1433,1541,1663,1775",
                         "endColumns": "107,121,111,84",
-                        "endOffsets": "1424,1546,1658,1743"
+                        "endOffsets": "1536,1658,1770,1855"
                     }
                 }
             ]

@@ -4,6 +4,7 @@
 #include <iostream>
 #include "math.h"
 #include "windowsec.h"
+#include "window.h"
 
 using namespace std;
 
@@ -177,5 +178,13 @@ void MainWindow::on_actionPrevod_Dec_Bin_Hex_triggered()
 {
     Windowsec *SWindow = new Windowsec;
     SWindow->show();
+    setVisible(false);
+}
+
+
+void MainWindow::on_actionKurz_listok_triggered()
+{
+    Window *CWindow = new Window;
+    CWindow->show();
     setVisible(false);
 }

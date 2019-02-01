@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -43,7 +43,7 @@
    <property name="minimumSize">
     <size>
      <width>400</width>
-     <height>495</height>
+     <height>650</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -58,7 +58,7 @@
       <x>10</x>
       <y>10</y>
       <width>272</width>
-      <height>652</height>
+      <height>676</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -72,8 +72,14 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>259</width>
-         <height>100</height>
+         <width>214</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
         </size>
        </property>
        <property name="font">
@@ -85,10 +91,17 @@
         </font>
        </property>
        <property name="text">
-        <string>Kurz Eura voci inym menam</string>
+        <string>Kurz 1€</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
@@ -276,7 +289,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>7</pointsize>
+             <pointsize>11</pointsize>
             </font>
            </property>
            <property name="styleSheet">
@@ -384,6 +397,9 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
@@ -431,7 +447,7 @@
          <property name="minimumSize">
           <size>
            <width>260</width>
-           <height>60</height>
+           <height>53</height>
           </size>
          </property>
          <property name="text">
@@ -453,6 +469,16 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuMoznosti">
+    <property name="title">
+     <string>Moznosti</string>
+    </property>
+    <addaction name="actionStandardna_kalkulacka"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrevod_Dec_Bin_Hex"/>
+    <addaction name="actionKurz_listok"/>
+   </widget>
+   <addaction name="menuMoznosti"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -465,6 +491,24 @@
     <bool>false</bool>
    </attribute>
   </widget>
+  <action name="actionStandardna_kalkulacka">
+   <property name="text">
+    <string>Standardna kalkulacka</string>
+   </property>
+  </action>
+  <action name="actionPrevod_Dec_Bin_Hex">
+   <property name="text">
+    <string>Prevod Dec-Bin-Hex</string>
+   </property>
+  </action>
+  <action name="actionKurz_listok">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Kurz. listok</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
