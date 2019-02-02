@@ -51,6 +51,8 @@ private slots:
 
     void on_actionKurz_listok_triggered();
 
+    void on_actionZnamky_triggered();
+
 private:
     Ui::Windowsec *ui;
     QString inputD;

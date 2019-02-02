@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -31,7 +31,8 @@ SOURCES += \
     postfixnotation.cpp \
     windowsec.cpp \
     window.cpp \
-    mynetworkclass.cpp
+    mynetworkclass.cpp \
+    skusky.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +41,8 @@ HEADERS += \
     lexicalanalyzer.h \
     windowsec.h \
     window.h \
-    mynetworkclass.h
+    mynetworkclass.h \
+    skusky.h
 
 FORMS += \
         mainwindow.ui \

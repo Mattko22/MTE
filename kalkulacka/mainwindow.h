@@ -46,9 +46,12 @@ private slots:
 
     void on_actionKurz_listok_triggered();
 
+    void on_actionZnamky_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString input;
+    QString inputEq;
 };
 
 #endif // MAINWINDOW_H

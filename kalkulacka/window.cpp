@@ -6,6 +6,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QSize>
+#include <skusky.h>
 
 Window::Window(QWidget *parent) :
     QMainWindow(parent),
@@ -82,6 +83,13 @@ void Window::on_actionStandardna_kalkulacka_triggered()
 void Window::on_actionPrevod_Dec_Bin_Hex_triggered()
 {
     Windowsec *SWindow = new Windowsec;
+    SWindow->show();
+    setVisible(false);
+}
+
+void Window::on_actionZnamky_triggered()
+{
+    Skusky *SWindow = new Skusky;
     SWindow->show();
     setVisible(false);
 }

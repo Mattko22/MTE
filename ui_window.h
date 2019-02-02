@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -30,8 +31,9 @@ public:
     QAction *actionStandardna_kalkulacka;
     QAction *actionPrevod_Dec_Bin_Hex;
     QAction *actionKurz_listok;
+    QAction *actionZnamky;
     QWidget *centralWidget;
-    QWidget *layoutWidget;
+    QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_8;
     QLabel *label_9;
@@ -88,19 +90,20 @@ public:
         actionKurz_listok = new QAction(Window);
         actionKurz_listok->setObjectName(QString::fromUtf8("actionKurz_listok"));
         actionKurz_listok->setEnabled(false);
+        actionZnamky = new QAction(Window);
+        actionZnamky->setObjectName(QString::fromUtf8("actionZnamky"));
         centralWidget = new QWidget(Window);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        centralWidget->setMinimumSize(QSize(400, 650));
+        centralWidget->setMinimumSize(QSize(200, 650));
         centralWidget->setMaximumSize(QSize(1500, 1500));
-        layoutWidget = new QWidget(centralWidget);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 272, 676));
-        verticalLayout_5 = new QVBoxLayout(layoutWidget);
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_8 = new QLabel(layoutWidget);
+        label_8 = new QLabel(centralWidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy);
@@ -116,7 +119,7 @@ public:
 
         verticalLayout_5->addWidget(label_8);
 
-        label_9 = new QLabel(layoutWidget);
+        label_9 = new QLabel(centralWidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
 
         verticalLayout_5->addWidget(label_9);
@@ -127,7 +130,7 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_13 = new QLabel(layoutWidget);
+        label_13 = new QLabel(centralWidget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
         label_13->setMinimumSize(QSize(130, 60));
         QFont font2;
@@ -138,7 +141,7 @@ public:
 
         horizontalLayout_3->addWidget(label_13);
 
-        label_14 = new QLabel(layoutWidget);
+        label_14 = new QLabel(centralWidget);
         label_14->setObjectName(QString::fromUtf8("label_14"));
         label_14->setMinimumSize(QSize(130, 60));
         label_14->setFont(font2);
@@ -153,7 +156,7 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_6 = new QLabel(layoutWidget);
+        label_6 = new QLabel(centralWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setMinimumSize(QSize(130, 60));
         label_6->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
@@ -161,7 +164,7 @@ public:
 
         horizontalLayout_2->addWidget(label_6);
 
-        label_66 = new QLabel(layoutWidget);
+        label_66 = new QLabel(centralWidget);
         label_66->setObjectName(QString::fromUtf8("label_66"));
         label_66->setMinimumSize(QSize(130, 60));
         label_66->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
@@ -181,7 +184,7 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label = new QLabel(layoutWidget);
+        label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
@@ -194,10 +197,12 @@ public:
 
         horizontalLayout_4->addWidget(label);
 
-        label_2 = new QLabel(layoutWidget);
+        label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setMinimumSize(QSize(130, 60));
-        label_2->setFont(font);
+        QFont font3;
+        font3.setPointSize(15);
+        label_2->setFont(font3);
         label_2->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
         label_2->setAlignment(Qt::AlignCenter);
 
@@ -209,7 +214,7 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        label_3 = new QLabel(layoutWidget);
+        label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setMinimumSize(QSize(130, 60));
         label_3->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
@@ -217,11 +222,13 @@ public:
 
         horizontalLayout_5->addWidget(label_3);
 
-        label_33 = new QLabel(layoutWidget);
+        label_33 = new QLabel(centralWidget);
         label_33->setObjectName(QString::fromUtf8("label_33"));
         label_33->setMinimumSize(QSize(130, 60));
-        label_33->setFont(font);
-        label_33->setStyleSheet(QString::fromUtf8("background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(255, 255, 255, 255), stop:0.373979 rgba(255, 255, 255, 255), stop:0.373991 rgba(33, 30, 255, 255), stop:0.624018 rgba(33, 30, 255, 255), stop:0.624043 rgba(255, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));"));
+        QFont font4;
+        font4.setPointSize(8);
+        label_33->setFont(font4);
+        label_33->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
         label_33->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_5->addWidget(label_33);
@@ -238,7 +245,7 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        label_4 = new QLabel(layoutWidget);
+        label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setMinimumSize(QSize(130, 60));
         label_4->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
@@ -246,7 +253,7 @@ public:
 
         horizontalLayout_6->addWidget(label_4);
 
-        label_44 = new QLabel(layoutWidget);
+        label_44 = new QLabel(centralWidget);
         label_44->setObjectName(QString::fromUtf8("label_44"));
         label_44->setMinimumSize(QSize(130, 60));
         label_44->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
@@ -260,7 +267,7 @@ public:
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setSpacing(6);
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        label_5 = new QLabel(layoutWidget);
+        label_5 = new QLabel(centralWidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setMinimumSize(QSize(130, 60));
         label_5->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
@@ -268,7 +275,7 @@ public:
 
         horizontalLayout_7->addWidget(label_5);
 
-        label_55 = new QLabel(layoutWidget);
+        label_55 = new QLabel(centralWidget);
         label_55->setObjectName(QString::fromUtf8("label_55"));
         label_55->setMinimumSize(QSize(130, 60));
         label_55->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
@@ -288,7 +295,7 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label_7 = new QLabel(layoutWidget);
+        label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setMinimumSize(QSize(130, 60));
         label_7->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 255);"));
@@ -296,7 +303,7 @@ public:
 
         horizontalLayout->addWidget(label_7);
 
-        label_77 = new QLabel(layoutWidget);
+        label_77 = new QLabel(centralWidget);
         label_77->setObjectName(QString::fromUtf8("label_77"));
         label_77->setMinimumSize(QSize(130, 60));
         label_77->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(196, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));"));
@@ -307,7 +314,7 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        pushButton = new QPushButton(layoutWidget);
+        pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setMinimumSize(QSize(260, 53));
 
@@ -315,6 +322,9 @@ public:
 
 
         verticalLayout_5->addLayout(verticalLayout);
+
+
+        gridLayout->addLayout(verticalLayout_5, 0, 0, 1, 1);
 
         Window->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Window);
@@ -332,6 +342,7 @@ public:
         menuMoznosti->addSeparator();
         menuMoznosti->addAction(actionPrevod_Dec_Bin_Hex);
         menuMoznosti->addAction(actionKurz_listok);
+        menuMoznosti->addAction(actionZnamky);
 
         retranslateUi(Window);
 
@@ -344,6 +355,7 @@ public:
         actionStandardna_kalkulacka->setText(QApplication::translate("Window", "Standardna kalkulacka", nullptr));
         actionPrevod_Dec_Bin_Hex->setText(QApplication::translate("Window", "Prevod Dec-Bin-Hex", nullptr));
         actionKurz_listok->setText(QApplication::translate("Window", "Kurz. listok", nullptr));
+        actionZnamky->setText(QApplication::translate("Window", "Znamky", nullptr));
         label_8->setText(QApplication::translate("Window", "Kurz 1\342\202\254", nullptr));
         label_9->setText(QString());
         label_13->setText(QApplication::translate("Window", "Mena", nullptr));

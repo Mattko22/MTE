@@ -23,6 +23,8 @@ private slots:
 
     void on_actionPrevod_Dec_Bin_Hex_triggered();
 
+    void on_actionZnamky_triggered();
+
 private:
     Ui::Window *ui;
     MyNetworkClass theDon;

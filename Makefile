@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/bin/clang
 CXX           = C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -D__ANDROID_API__=16 -target armv7-none-linux-androideabi -gcc-toolchain C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -DANDROID_HAS_WSTRING --sysroot=C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/android/support/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -fstack-protector-strong -DANDROID -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -fno-builtin-memmove -g -marm -O0 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -D__ANDROID_API__=16 -target armv7-none-linux-androideabi -gcc-toolchain C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -DANDROID_HAS_WSTRING --sysroot=C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/android/support/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -fstack-protector-strong -DANDROID -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -fno-builtin-memmove -g -g -marm -O0 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -Ikalkulacka -I. -IC:\qtcrator\5.12.0\android_armv7\include -IC:\qtcrator\5.12.0\android_armv7\include\QtWidgets -IC:\qtcrator\5.12.0\android_armv7\include\QtGui -IC:\qtcrator\5.12.0\android_armv7\include\QtNetwork -IC:\qtcrator\5.12.0\android_armv7\include\QtCore -I. -I. -IC:\qtcrator\5.12.0\android_armv7\mkspecs\android-clang
+INCPATH       = -Ikalkulacka -I. -IC:\qtcrator\5.12.0\android_armv7\include -IC:\qtcrator\5.12.0\android_armv7\include\QtWidgets -IC:\qtcrator\5.12.0\android_armv7\include\QtGui -IC:\qtcrator\5.12.0\android_armv7\include\QtNetwork -IC:\qtcrator\5.12.0\android_armv7\include\QtSql -IC:\qtcrator\5.12.0\android_armv7\include\QtCore -I. -I. -IC:\qtcrator\5.12.0\android_armv7\mkspecs\android-clang
 QMAKE         = C:\qtcrator\5.12.0\android_armv7\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -38,7 +38,7 @@ DISTNAME      = libkalkulacka.so1.0.0
 DISTDIR = C:\Users\Dominika\Desktop\skola\MTE\kalkulacka\MTE\.tmp\libkalkulacka.so1.0.0
 LINK          = C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++ -D__ANDROID_API__=16 -target armv7-none-linux-androideabi -gcc-toolchain C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -Wl,--exclude-libs,libgcc.a
 LFLAGS        = --sysroot=C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/platforms/android-16/arch-arm/ -Wl,-soname,libkalkulacka.so -Wl,-rpath=C:/qtcrator/5.12.0/android_armv7/lib -Wl,--no-undefined -Wl,-z,noexecstack -shared
-LIBS          = $(SUBLIBS) -LC:/qtcrator/5.12.0/android_armv7/lib -lQt5Widgets -Lc:\Utils\Android\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a -lQt5Gui -lQt5Network -lQt5Core -lGLESv2  -LC:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++.so.16 -llog -lz -lm -ldl -lc
+LIBS          = $(SUBLIBS) -LC:/qtcrator/5.12.0/android_armv7/lib -lQt5Widgets -Lc:\Utils\Android\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a -lQt5Gui -lQt5Network -lQt5Sql -lQt5Core -lGLESv2  -LC:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++.so.16 -llog -lz -lm -ldl -lc
 AR            = C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-ar cqs
 RANLIB        = C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-ranlib
 SED           = $(QMAKE) -install sed
@@ -57,11 +57,13 @@ SOURCES       = kalkulacka\main.cpp \
 		kalkulacka\postfixnotation.cpp \
 		kalkulacka\windowsec.cpp \
 		kalkulacka\window.cpp \
-		kalkulacka\mynetworkclass.cpp qrc_img.cpp \
+		kalkulacka\mynetworkclass.cpp \
+		kalkulacka\skusky.cpp qrc_img.cpp \
 		moc_mainwindow.cpp \
 		moc_windowsec.cpp \
 		moc_window.cpp \
-		moc_mynetworkclass.cpp
+		moc_mynetworkclass.cpp \
+		moc_skusky.cpp
 OBJECTS       = main.obj \
 		mainwindow.obj \
 		controller.obj \
@@ -70,11 +72,13 @@ OBJECTS       = main.obj \
 		windowsec.obj \
 		window.obj \
 		mynetworkclass.obj \
+		skusky.obj \
 		qrc_img.obj \
 		moc_mainwindow.obj \
 		moc_windowsec.obj \
 		moc_window.obj \
-		moc_mynetworkclass.obj
+		moc_mynetworkclass.obj \
+		moc_skusky.obj
 DIST          = kalkulacka\android\AndroidManifest.xml \
 		kalkulacka\android\gradle\wrapper\gradle-wrapper.jar \
 		kalkulacka\android\gradlew \
@@ -87,14 +91,16 @@ DIST          = kalkulacka\android\AndroidManifest.xml \
 		kalkulacka\lexicalanalyzer.h \
 		kalkulacka\windowsec.h \
 		kalkulacka\window.h \
-		kalkulacka\mynetworkclass.h kalkulacka\main.cpp \
+		kalkulacka\mynetworkclass.h \
+		kalkulacka\skusky.h kalkulacka\main.cpp \
 		kalkulacka\mainwindow.cpp \
 		kalkulacka\controller.cpp \
 		kalkulacka\lexicalanalyzer.cpp \
 		kalkulacka\postfixnotation.cpp \
 		kalkulacka\windowsec.cpp \
 		kalkulacka\window.cpp \
-		kalkulacka\mynetworkclass.cpp
+		kalkulacka\mynetworkclass.cpp \
+		kalkulacka\skusky.cpp
 QMAKE_TARGET  = libkalkulacka.so
 DESTDIR       = 
 TARGET        = libkalkulacka.so
@@ -103,7 +109,7 @@ TARGET        = libkalkulacka.so
 first: all
 ####### Build rules
 
-libkalkulacka.so: ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h $(OBJECTS)  
+libkalkulacka.so: ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h ui_skusky.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: kalkulacka\kalkulacka.pro C:\qtcrator\5.12.0\android_armv7\mkspecs\android-clang\qmake.conf C:\qtcrator\5.12.0\android_armv7\mkspecs\features\spec_pre.prf \
@@ -269,6 +275,7 @@ Makefile: kalkulacka\kalkulacka.pro C:\qtcrator\5.12.0\android_armv7\mkspecs\and
 		C:\qtcrator\5.12.0\android_armv7\lib\libQt5Widgets.prl \
 		C:\qtcrator\5.12.0\android_armv7\lib\libQt5Gui.prl \
 		C:\qtcrator\5.12.0\android_armv7\lib\libQt5Network.prl \
+		C:\qtcrator\5.12.0\android_armv7\lib\libQt5Sql.prl \
 		C:\qtcrator\5.12.0\android_armv7\lib\libQt5Core.prl
 	$(QMAKE) -o Makefile kalkulacka\kalkulacka.pro -spec android-clang "CONFIG+=debug" "CONFIG+=qml_debug"
 C:\qtcrator\5.12.0\android_armv7\mkspecs\features\spec_pre.prf:
@@ -434,6 +441,7 @@ kalkulacka\img.qrc:
 C:\qtcrator\5.12.0\android_armv7\lib\libQt5Widgets.prl:
 C:\qtcrator\5.12.0\android_armv7\lib\libQt5Gui.prl:
 C:\qtcrator\5.12.0\android_armv7\lib\libQt5Network.prl:
+C:\qtcrator\5.12.0\android_armv7\lib\libQt5Sql.prl:
 C:\qtcrator\5.12.0\android_armv7\lib\libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile kalkulacka\kalkulacka.pro -spec android-clang "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -451,9 +459,9 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)\
 	$(COPY_FILE) --parents kalkulacka\img.qrc $(DISTDIR)\
 	$(COPY_FILE) --parents C:\qtcrator\5.12.0\android_armv7\mkspecs\features\data\dummy.cpp $(DISTDIR)\
-	$(COPY_FILE) --parents kalkulacka\mainwindow.h kalkulacka\controller.h kalkulacka\postfixnotation.h kalkulacka\lexicalanalyzer.h kalkulacka\windowsec.h kalkulacka\window.h kalkulacka\mynetworkclass.h $(DISTDIR)\
-	$(COPY_FILE) --parents kalkulacka\main.cpp kalkulacka\mainwindow.cpp kalkulacka\controller.cpp kalkulacka\lexicalanalyzer.cpp kalkulacka\postfixnotation.cpp kalkulacka\windowsec.cpp kalkulacka\window.cpp kalkulacka\mynetworkclass.cpp $(DISTDIR)\
-	$(COPY_FILE) --parents kalkulacka\mainwindow.ui kalkulacka\windowsec.ui kalkulacka\dialog.ui kalkulacka\window.ui $(DISTDIR)\
+	$(COPY_FILE) --parents kalkulacka\mainwindow.h kalkulacka\controller.h kalkulacka\postfixnotation.h kalkulacka\lexicalanalyzer.h kalkulacka\windowsec.h kalkulacka\window.h kalkulacka\mynetworkclass.h kalkulacka\skusky.h $(DISTDIR)\
+	$(COPY_FILE) --parents kalkulacka\main.cpp kalkulacka\mainwindow.cpp kalkulacka\controller.cpp kalkulacka\lexicalanalyzer.cpp kalkulacka\postfixnotation.cpp kalkulacka\windowsec.cpp kalkulacka\window.cpp kalkulacka\mynetworkclass.cpp kalkulacka\skusky.cpp $(DISTDIR)\
+	$(COPY_FILE) --parents kalkulacka\mainwindow.ui kalkulacka\windowsec.ui kalkulacka\dialog.ui kalkulacka\window.ui kalkulacka\skusky.ui $(DISTDIR)\
 
 
 clean: compiler_clean 
@@ -493,9 +501,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: C:\qtcrator\5.12.0\android_armv7\mkspecs\features\data\dummy.cpp
 	C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++ -D__ANDROID_API__=16 -target armv7-none-linux-androideabi -gcc-toolchain C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 -DANDROID_HAS_WSTRING --sysroot=C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/android/support/include -isystem C:\Users\Dominika\Downloads\android-ndk-r18b-windows-x86_64\android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -fstack-protector-strong -DANDROID -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -fno-builtin-memmove -g -g -marm -O0 -Wall -W -dM -E -o moc_predefs.h C:\qtcrator\5.12.0\android_armv7\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_windowsec.cpp moc_window.cpp moc_mynetworkclass.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_windowsec.cpp moc_window.cpp moc_mynetworkclass.cpp moc_skusky.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_windowsec.cpp moc_window.cpp moc_mynetworkclass.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_windowsec.cpp moc_window.cpp moc_mynetworkclass.cpp moc_skusky.cpp
 moc_mainwindow.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
 		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmainwindow.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtwidgetsglobal.h \
@@ -605,7 +613,7 @@ moc_mainwindow.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWind
 		kalkulacka\mainwindow.h \
 		moc_predefs.h \
 		C:\qtcrator\5.12.0\android_armv7\bin\moc.exe
-	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\mainwindow.h -o moc_mainwindow.cpp
+	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtSql -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\mainwindow.h -o moc_mainwindow.cpp
 
 moc_windowsec.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
 		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmainwindow.h \
@@ -716,7 +724,7 @@ moc_windowsec.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindo
 		kalkulacka\windowsec.h \
 		moc_predefs.h \
 		C:\qtcrator\5.12.0\android_armv7\bin\moc.exe
-	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\windowsec.h -o moc_windowsec.cpp
+	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtSql -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\windowsec.h -o moc_windowsec.cpp
 
 moc_window.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
 		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmainwindow.h \
@@ -1011,7 +1019,7 @@ moc_window.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
 		kalkulacka\window.h \
 		moc_predefs.h \
 		C:\qtcrator\5.12.0\android_armv7\bin\moc.exe
-	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\window.h -o moc_window.cpp
+	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtSql -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\window.h -o moc_window.cpp
 
 moc_mynetworkclass.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtCore\QObject \
 		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobject.h \
@@ -1271,15 +1279,134 @@ moc_mynetworkclass.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtCore\QObject 
 		kalkulacka\mynetworkclass.h \
 		moc_predefs.h \
 		C:\qtcrator\5.12.0\android_armv7\bin\moc.exe
-	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\mynetworkclass.h -o moc_mynetworkclass.cpp
+	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtSql -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\mynetworkclass.h -o moc_mynetworkclass.cpp
+
+moc_skusky.cpp: C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmainwindow.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtwidgetsglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtguiglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qconfig-bootstrapped.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qconfig.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtcore-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsystemdetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qprocessordetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcompilerdetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtypeinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsysinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlogging.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qflags.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbasicatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_bootstrap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qgenericatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_cxx11.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_msvc.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qglobalstatic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmutex.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qnumeric.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qversiontagging.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtgui-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtwidgets-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qwindowdefs.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobjectdefs.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qnamespace.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobjectdefs_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qwindowdefs_win.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobject.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstring.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qchar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbytearray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrefcount.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qarraydata.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringliteral.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringalgorithms.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringview.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringbuilder.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qalgorithms.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qiterator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qhashfunctions.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpair.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbytearraylist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringlist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qregexp.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringmatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcoreevent.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qscopedpointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmetatype.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvarlengtharray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcontainerfwd.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobject_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmargins.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpaintdevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrect.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsize.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpoint.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpalette.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qcolor.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qrgb.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qrgba64.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qbrush.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvector.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qmatrix.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpolygon.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qregion.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdatastream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qiodevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qline.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtransform.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpainterpath.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qimage.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpixelformat.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpixmap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsharedpointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qshareddata.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qhash.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsharedpointer_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfont.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfontmetrics.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfontinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qsizepolicy.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qcursor.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qkeysequence.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qevent.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvariant.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdebug.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtextstream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlocale.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qset.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcontiguouscache.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qurl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qurlquery.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfile.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfiledevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qvector2d.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtouchdevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtabwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qicon.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlDatabase \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqldatabase.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsqlglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsql-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlTableModel \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqltablemodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqlquerymodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractitemmodel.h \
+		kalkulacka\skusky.h \
+		moc_predefs.h \
+		C:\qtcrator\5.12.0\android_armv7\bin\moc.exe
+	C:\qtcrator\5.12.0\android_armv7\bin\moc.exe $(DEFINES) --include C:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/moc_predefs.h -IC:/qtcrator/5.12.0/android_armv7/mkspecs/android-clang -IC:/Users/Dominika/Desktop/skola/MTE/kalkulacka/MTE/kalkulacka -IC:/qtcrator/5.12.0/android_armv7/include -IC:/qtcrator/5.12.0/android_armv7/include/QtWidgets -IC:/qtcrator/5.12.0/android_armv7/include/QtGui -IC:/qtcrator/5.12.0/android_armv7/include/QtNetwork -IC:/qtcrator/5.12.0/android_armv7/include/QtSql -IC:/qtcrator/5.12.0/android_armv7/include/QtCore -I. -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include/arm-linux-androideabi -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/android/support/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sources/cxx-stl/llvm-libc++abi/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/7.0.2/include -IC:/Users/Dominika/Downloads/android-ndk-r18b-windows-x86_64/android-ndk-r18b/sysroot/usr/include kalkulacka\skusky.h -o moc_skusky.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h
+compiler_uic_make_all: ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h ui_skusky.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h
+	-$(DEL_FILE) ui_mainwindow.h ui_windowsec.h ui_dialog.h ui_window.h ui_skusky.h
 ui_mainwindow.h: kalkulacka\mainwindow.ui \
 		C:\qtcrator\5.12.0\android_armv7\bin\uic.exe
 	C:\qtcrator\5.12.0\android_armv7\bin\uic.exe kalkulacka\mainwindow.ui -o ui_mainwindow.h
@@ -1295,6 +1422,10 @@ ui_dialog.h: kalkulacka\dialog.ui \
 ui_window.h: kalkulacka\window.ui \
 		C:\qtcrator\5.12.0\android_armv7\bin\uic.exe
 	C:\qtcrator\5.12.0\android_armv7\bin\uic.exe kalkulacka\window.ui -o ui_window.h
+
+ui_skusky.h: kalkulacka\skusky.ui \
+		C:\qtcrator\5.12.0\android_armv7\bin\uic.exe
+	C:\qtcrator\5.12.0\android_armv7\bin\uic.exe kalkulacka\skusky.ui -o ui_skusky.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1747,7 +1878,15 @@ mainwindow.obj: kalkulacka\mainwindow.cpp kalkulacka\mainwindow.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslkey.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qudpsocket.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtnetworkversion.h \
-		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkReply
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkReply \
+		kalkulacka\skusky.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlDatabase \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqldatabase.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsqlglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsql-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlTableModel \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqltablemodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqlquerymodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.obj kalkulacka\mainwindow.cpp
 
 controller.obj: kalkulacka\controller.cpp kalkulacka\controller.h \
@@ -2583,6 +2722,33 @@ window.obj: kalkulacka\window.cpp kalkulacka\window.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtnetworkversion.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkReply \
 		ui_window.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QAction \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qaction.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qactiongroup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QApplication \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qapplication.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qdesktopwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qguiapplication.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qinputmethod.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QHBoxLayout \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qboxlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlayoutitem.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qgridlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QLabel \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlabel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qframe.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMenu \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmenu.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMenuBar \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmenubar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QPushButton \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qpushbutton.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qabstractbutton.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QToolBar \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtoolbar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QVBoxLayout \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QWidget \
 		kalkulacka\mainwindow.h \
 		kalkulacka\windowsec.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QDebug \
@@ -2849,6 +3015,347 @@ mynetworkclass.obj: kalkulacka\mynetworkclass.cpp kalkulacka\mynetworkclass.h \
 		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkReply
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mynetworkclass.obj kalkulacka\mynetworkclass.cpp
 
+skusky.obj: kalkulacka\skusky.cpp kalkulacka\skusky.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMainWindow \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmainwindow.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtwidgetsglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtguiglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qconfig-bootstrapped.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qconfig.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtcore-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsystemdetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qprocessordetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcompilerdetection.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtypeinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsysinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlogging.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qflags.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbasicatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_bootstrap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qgenericatomic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_cxx11.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qatomic_msvc.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qglobalstatic.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmutex.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qnumeric.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qversiontagging.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtgui-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtwidgets-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qwindowdefs.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobjectdefs.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qnamespace.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobjectdefs_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qwindowdefs_win.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobject.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstring.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qchar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbytearray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrefcount.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qarraydata.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringliteral.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringalgorithms.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringview.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringbuilder.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qalgorithms.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qiterator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qhashfunctions.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpair.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbytearraylist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringlist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qregexp.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringmatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcoreevent.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qscopedpointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmetatype.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvarlengtharray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcontainerfwd.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobject_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmargins.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpaintdevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrect.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsize.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpoint.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpalette.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qcolor.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qrgb.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qrgba64.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qbrush.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvector.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qmatrix.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpolygon.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qregion.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdatastream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qiodevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qline.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtransform.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpainterpath.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qimage.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpixelformat.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qpixmap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsharedpointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qshareddata.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qhash.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsharedpointer_impl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfont.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfontmetrics.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qfontinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qsizepolicy.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qcursor.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qkeysequence.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qevent.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvariant.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdebug.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtextstream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlocale.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qset.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcontiguouscache.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qurl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qurlquery.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfile.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfiledevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qvector2d.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qtouchdevice.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtabwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qicon.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlDatabase \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqldatabase.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsqlglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qtsql-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlTableModel \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqltablemodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqlquerymodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractitemmodel.h \
+		ui_skusky.h \
+		kalkulacka\window.h \
+		kalkulacka\mynetworkclass.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QObject \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QtNetwork \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QtNetworkDepends \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QtCore \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QtCoreDepends \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractanimation.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstracteventdispatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qeventloop.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractnativeeventfilter.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractproxymodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstractstate.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qabstracttransition.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qanimationgroup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qarraydataops.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qarraydatapointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbasictimer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbitarray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbuffer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qbytearraymatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcache.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcborarray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcborvalue.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdatetime.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcborcommon.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qregularexpression.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\quuid.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcbormap.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcborstream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfloat16.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcollator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcommandlineoption.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcommandlineparser.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcoreapplication.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qcryptographichash.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdeadlinetimer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qelapsedtimer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdir.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfileinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qdiriterator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qeasingcurve.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qendian.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qeventtransition.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qexception.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfactoryinterface.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfileselector.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QStringList \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfilesystemwatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfinalstate.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfuture.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfutureinterface.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrunnable.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qresultstore.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfuturesynchronizer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qfuturewatcher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qhistorystate.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qidentityproxymodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qisenum.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qitemselectionmodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qjsonarray.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qjsonvalue.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qjsondocument.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qjsonobject.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlibrary.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlibraryinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qversionnumber.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlinkedlist.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qlockfile.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qloggingcategory.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmath.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmessageauthenticationcode.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmetaobject.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmimedata.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmimedatabase.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qmimetype.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qobjectcleanuphandler.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qoperatingsystemversion.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qparallelanimationgroup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpauseanimation.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qplugin.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpointer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpluginloader.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qprocess.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qpropertyanimation.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qvariantanimation.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qqueue.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qrandom.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qreadwritelock.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qresource.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsavefile.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qscopedvaluerollback.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qscopeguard.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsemaphore.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsequentialanimationgroup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsettings.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsharedmemory.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsignalmapper.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsignaltransition.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsocketnotifier.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsortfilterproxymodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstack.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstandardpaths.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstate.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstatemachine.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstorageinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qstringlistmodel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qsystemsemaphore.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtemporarydir.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtemporaryfile.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtextboundaryfinder.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtextcodec.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qthread.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qthreadpool.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qthreadstorage.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtimeline.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtimer.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtimezone.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtranslator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtypetraits.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qwaitcondition.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qwineventnotifier.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qxmlstream.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\qtcoreversion.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtnetworkglobal.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtnetwork-config.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qabstractnetworkcache.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkrequest.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QSharedDataPointer \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QString \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QUrl \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QVariant \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qabstractsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qauthenticator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qdnslookup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qdtls.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtcpsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslerror.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslcertificate.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qssl.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QFlags \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qhostaddress.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qhostinfo.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qhstspolicy.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qhttpmultipart.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QByteArray \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QIODevice \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkRequest \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qlocalserver.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qlocalsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkaccessmanager.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QVector \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QSslConfiguration \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslconfiguration.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QMetaType \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkconfigmanager.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkconfiguration.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkcookie.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QList \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkcookiejar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkdatagram.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkdiskcache.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkinterface.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkproxy.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworkreply.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkAccessManager \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qnetworksession.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qpassworddigestor.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QCryptographicHash \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsctpserver.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtcpserver.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsctpsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslcertificateextension.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslcipher.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qssldiffiehellmanparameters.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslellipticcurve.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QHash \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qsslkey.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qudpsocket.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\qtnetworkversion.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtNetwork\QNetworkReply \
+		ui_window.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QAction \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qaction.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qactiongroup.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QApplication \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qapplication.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qdesktopwidget.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qguiapplication.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtGui\qinputmethod.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QHBoxLayout \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qboxlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlayoutitem.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qgridlayout.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QLabel \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qlabel.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qframe.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMenu \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmenu.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMenuBar \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmenubar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QPushButton \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qpushbutton.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qabstractbutton.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QToolBar \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qtoolbar.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QVBoxLayout \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QWidget \
+		kalkulacka\mainwindow.h \
+		kalkulacka\windowsec.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QDir \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\QMessageBox \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qmessagebox.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtWidgets\qdialog.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlQuery \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqlquery.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\QSqlRecord \
+		C:\qtcrator\5.12.0\android_armv7\include\QtSql\qsqlrecord.h \
+		C:\qtcrator\5.12.0\android_armv7\include\QtCore\QtDebug
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o skusky.obj kalkulacka\skusky.cpp
+
 qrc_img.obj: qrc_img.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_img.obj qrc_img.cpp
 
@@ -2863,6 +3370,9 @@ moc_window.obj: moc_window.cpp
 
 moc_mynetworkclass.obj: moc_mynetworkclass.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mynetworkclass.obj moc_mynetworkclass.cpp
+
+moc_skusky.obj: moc_skusky.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_skusky.obj moc_skusky.cpp
 
 ####### Install
 

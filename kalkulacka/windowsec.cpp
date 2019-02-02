@@ -5,6 +5,7 @@
 #include <iostream>
 #include "math.h"
 #include <QDebug>
+#include <skusky.h>
 
 Windowsec::Windowsec(QWidget *parent) :
     QMainWindow(parent),
@@ -408,5 +409,12 @@ void Windowsec::on_actionKurz_listok_triggered()
 {
     Window *CWindow = new Window;
     CWindow->show();
+    setVisible(false);
+}
+
+void Windowsec::on_actionZnamky_triggered()
+{
+    Skusky *SWindow = new Skusky;
+    SWindow->show();
     setVisible(false);
 }

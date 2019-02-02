@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>Skusky</class>
+ <widget class="QMainWindow" name="Skusky">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,8 +11,232 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>MainWindow</string>
   </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>predmet:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_predmet"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="spacing">
+         <number>50</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>ročník:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_rocnik">
+            <item>
+             <property name="text">
+              <string>1.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>3.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5.</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>známka:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="combo_znamka">
+            <item>
+             <property name="text">
+              <string>A</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>B</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>C</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>D</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>E</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>F</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fx</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>semester:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_semes">
+          <item>
+           <property name="text">
+            <string>zimný</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>letný</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QPushButton" name="btn_add">
+          <property name="text">
+           <string>Pridaj</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_delete">
+          <property name="text">
+           <string>Zmaz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_load">
+          <property name="text">
+           <string>Nacitaj</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView">
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMoznosti">
+    <property name="title">
+     <string>Moznosti</string>
+    </property>
+    <addaction name="actionStandardna_kalkulacka"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrevod_Dec_Bin_Hex"/>
+    <addaction name="actionKurz_listok"/>
+    <addaction name="actionZnamky"/>
+   </widget>
+   <addaction name="menuMoznosti"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionStandardna_kalkulacka">
+   <property name="text">
+    <string>Standardna kalkulacka</string>
+   </property>
+  </action>
+  <action name="actionPrevod_Dec_Bin_Hex">
+   <property name="text">
+    <string>Prevod Dec-Bin-Hex</string>
+   </property>
+  </action>
+  <action name="actionKurz_listok">
+   <property name="text">
+    <string>Kurz. listok</string>
+   </property>
+  </action>
+  <action name="actionZnamky">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Znamky</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
