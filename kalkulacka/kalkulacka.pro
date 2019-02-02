@@ -46,7 +46,8 @@ FORMS += \
         mainwindow.ui \
     windowsec.ui \
     dialog.ui \
-    window.ui
+    window.ui \
+    skusky.ui
 
 RESOURCES += \
     img.qrc
